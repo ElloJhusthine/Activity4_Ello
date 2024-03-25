@@ -2,50 +2,71 @@
 <!-- This is a comment -->
 <html lang="en">
 <head>
-  <title>Portfolio_Ello</title>
+  <title>Bootstrap_Ello</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+
+/* Border size of the conatiner size of "Thank You" */
+          footer {
+      background-color: #f569b6;
+      padding: 15px;
+    }
+/* Image size inside the box */
+    img {
+  border: 15px solid #f569b6;
+}
+
   <style>
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
     }
     
-    footer {
-      background-color: #f569b6;
-      padding: 15px;
-    }
-    img {
-  border: 10px solid #f569b6;
-}
-
 body {
     padding: 20px;
     background: linear-gradient(to bottom left, #33ccff 0%, #ff99cc 100%)
 }
-  </style>
+      
+
+
+
+/* This is for the size of the attached content photo */
+.content {
+  background-color: none;
+  padding: 5px;
+}
+
+.show {
+  display: white;
+}
+
+/* This is for the border if you click the button */
+.btn {
+  border: #100F0C;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f569b6;
+  cursor: pointer;
+}
+
+/* Color result if you put the curson on the button */
+.btn:hover {
+  background-color: #FF33DA;
+}
+
+/* The button you click */
+.btn.active {
+  background-color: #FF336E;
+  color: black; 
+}
+</style>
 </head>
 <body>
-
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-<div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('HOME')"> HOME</button>
-  <button class="btn" onclick="filterSelection('SOCIAL MEDIA SITE')"> SOCIAL MEDIA SITE</button>
-  <button class="btn" onclick="filterSelection('LIKES')"> LIKES</button>
-  <button class="btn" onclick="filterSelection('CONTACT INFORMATION')"> CONTACT INFORMATION</button>
-    </div>
-  </div>
-</nav>
 
 <div class="jumbotron">
   <div class="container text-center">
@@ -66,11 +87,88 @@ body {
 </div>
 </div><br><br>
 
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> HOME</button>
+  <button class="btn" onclick="filterSelection('SOCIAL MEDIA SITE')"> SOCIAL MEDIA SITE</button>
+  <button class="btn" onclick="filterSelection('LIKES')"> LIKES</button>
+  <button class="btn" onclick="filterSelection('CONTACT INFORMATION')"> CONTACT INFORMATION</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column SOCIAL MEDIA SITE">
+    <div class="content">
+      <img src="Screenshot 2024-03-05 3.00.37 PM.png" alt="SOCIAL MEDIA SITE" style="width:30%">
+      <h4><b>Facebook</b></h4>
+      <p>https://www.facebook.com/angel.malongo</p>
+    </div>
+  </div>
+    <div class="column SOCIAL MEDIA SITE">
+    <div class="content">
+    <img src="Screenshot 2024-03-26 2.33.50 AM.png" alt="SOCIAL MEDIA SITE" style="width:30%"/>
+      <h4><b>Tiktok</b></h4>
+      <p>Private Account</p>
+    </div>
+  </div>
+  <div class="column SOCIAL MEDIA SITE">
+    <div class="content">
+    <img src="Screenshot 2024-03-05 3.00.37 PM.png" alt="SOCIAL MEDIA SITE" style="width:30%">
+      <h4><b>Instagram</b></h4>
+      <p>https://www.instagram.com/____jstne____/</p>
+    </div>
+  </div>
+  
+  <div class="column LIKES">
+    <div class="content">
+      <img src="Screenshot 2024-03-26 2.34.42 AM.png" alt="LIKES" style="width:30%">
+      <h4><b>Kdrama</b></h4>
+    </div>
+  </div>
+  <div class="column LIKES">
+    <div class="content">
+    <img src="Screenshot 2024-03-26 2.34.19 AM.png" alt="LIKES" style="width:30%">
+      <h4><b>Wattpad</b></h4>
+    </div>
+  </div>
+  <div class="column LIKES">
+    <div class="content">
+    <img src="Screenshot 2024-03-26 2.32.44 AM.png" alt="LIKES" style="width:30%">
+      <h4><b>Sleeping</b></h4>
+    </div>
+  </div>
+
+  <div class="column CONTACT INFORMATION">
+    <div class="content">
+      <img src="Screenshot 2024-03-26 2.39.34 AM.png" alt="CONTACT INFORMATION" style="width:30%">
+      <h4><b>Phone Number</b></h4>
+      <p>09532662523.</p>
+    </div>
+  </div>
+  <div class="column CONTACT INFORMATION">
+    <div class="content">
+    <img src="Screenshot 2024-03-26 2.36.44 AM.png" alt="CONTACT INFORMATION" style="width:30%">
+      <h4><b>Email</b></h4>
+      <p>jhusthine.ello@gmail.com</p>
+    </div>
+  </div>
+  <div class="column CONTACT INFORMATION">
+    <div class="content">
+    <img src="Screenshot 2024-03-26 2.38.27 AM.png" alt="CONTACT INFORMATION" style="width:30%">
+      <h4><b>Address</b></h4>
+      <p>Purok 3, Gusa, CDO</p>
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+
+
 <footer class="container-fluid text-center">
   <p>THANK YOU!!</p>
 </footer>
-
-<div id="grad1"></div>
 
 </body>
 </html>
